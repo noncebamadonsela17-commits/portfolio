@@ -324,10 +324,55 @@ h1 {
   font-size: 0.95rem;
 }
 
+.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #0c1416;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.skill-grid h3 {
+  margin: 0 0 0.55rem;
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.skill-grid ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-grid li {
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.writeup {
+  margin: 1rem 0 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.writeup strong {
+  color: var(--accent);
+}
+
 .status {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.65rem;
   width: fit-content;
   max-width: calc(100% - 2rem);
@@ -669,6 +714,10 @@ footer {
 
   .socials {
     margin-bottom: 2rem;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
