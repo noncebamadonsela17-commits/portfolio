@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="css/styles.css">
@@ -28,13 +28,9 @@
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Nonceba Madonsela, back to top">
-        <span class="brand-mark">N</span>
+        <span class="brand-mark">NM</span>
+        <span class="brand-word">Nonceba Madonsela</span>
       </a>
-      <p class="header-name">Nonceba <strong>Madonsela</strong></p>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
-        Menu
-        <span class="menu-icon" aria-hidden="true"></span>
-      </button>
       <nav id="menu" class="menu" aria-label="Page">
         <a href="#about">About</a>
         <a href="#work">Work</a>
@@ -43,7 +39,13 @@
         <a href="#github">GitHub</a>
         <a href="#contact">Contact</a>
       </nav>
+      <a class="resume" href="Nonceba_Madonsela_CV.pdf" download>Résumé</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        Menu
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
     </header>
+    <p class="progress" id="progress" aria-hidden="true">00%</p>
 
     <main id="top">
       <section class="hero">
@@ -79,6 +81,7 @@
           <span class="fill">Nonceba</span>
           <span class="stroke">Madonsela</span>
         </h1>
+        <p class="purpose">Systems that still deliver</p>
         <p class="intro">
           Trainee software developer building Python systems, REST APIs, and AWS
           pipelines that still deliver when the network drops.
@@ -111,6 +114,13 @@
           height="1024"
         >
       </section>
+
+      <div class="ticker" aria-hidden="true">
+        <p class="ticker-track">
+          <span>Python ✦ SQL ✦ Java ✦ AWS ✦ Terraform ✦ Docker ✦ PostgreSQL ✦ dbt ✦ Airflow ✦ pandas ✦ pytest ✦ Git ✦ Linux ✦ REST APIs ✦ </span>
+          <span>Python ✦ SQL ✦ Java ✦ AWS ✦ Terraform ✦ Docker ✦ PostgreSQL ✦ dbt ✦ Airflow ✦ pandas ✦ pytest ✦ Git ✦ Linux ✦ REST APIs ✦ </span>
+        </p>
+      </div>
 
       <section id="about" class="block">
         <h2>About</h2>
@@ -177,22 +187,22 @@
               <rect width="920" height="230" fill="#0c1416"/>
               <text x="24" y="32" fill="#9aabb5" font-size="13" font-family="Manrope, sans-serif">Cape Town · af-south-1</text>
               <g font-family="Manrope, sans-serif" font-size="14" fill="#f4f7f8" text-anchor="middle">
-                <rect x="24" y="58" width="150" height="64" rx="8" fill="#14302c" stroke="#3ee0c7"/>
+                <rect x="24" y="58" width="150" height="64" rx="8" fill="#14302c" stroke="#e6d3ae"/>
                 <text x="99" y="84">Clinic script</text>
                 <text x="99" y="104" fill="#9aabb5" font-size="12">retry on drop</text>
-                <rect x="230" y="58" width="140" height="64" rx="8" fill="#14302c" stroke="#3ee0c7"/>
+                <rect x="230" y="58" width="140" height="64" rx="8" fill="#14302c" stroke="#e6d3ae"/>
                 <text x="300" y="84">S3</text>
                 <text x="300" y="104" fill="#9aabb5" font-size="12">versioned</text>
-                <rect x="426" y="58" width="140" height="64" rx="8" fill="#14302c" stroke="#3ee0c7"/>
+                <rect x="426" y="58" width="140" height="64" rx="8" fill="#14302c" stroke="#e6d3ae"/>
                 <text x="496" y="84">SQS</text>
                 <text x="496" y="104" fill="#9aabb5" font-size="12">queue</text>
-                <rect x="622" y="58" width="160" height="64" rx="8" fill="#14302c" stroke="#3ee0c7"/>
+                <rect x="622" y="58" width="160" height="64" rx="8" fill="#14302c" stroke="#e6d3ae"/>
                 <text x="702" y="84">Lambda</text>
                 <text x="702" y="104" fill="#9aabb5" font-size="12">validate</text>
                 <rect x="426" y="150" width="140" height="52" rx="8" fill="#1a2224" stroke="#5c6c7c"/>
                 <text x="496" y="181" fill="#9aabb5" font-size="13">Dead-letter queue</text>
               </g>
-              <g stroke="#3ee0c7" stroke-width="2" fill="none">
+              <g stroke="#e6d3ae" stroke-width="2" fill="none">
                 <path d="M174 90 H230"/>
                 <path d="M370 90 H426"/>
                 <path d="M566 90 H622"/>
@@ -202,6 +212,7 @@
           </div>
           <div class="card-body">
             <p class="tags">AWS · Terraform · S3 · SQS · Python</p>
+            <p class="eyebrow">01 — AWS · Terraform</p>
             <h3>Hospital Occupancy Cloud</h3>
             <p class="result">Files still reach the cloud when a clinic connection drops, and none are lost if processing is slow.</p>
             <ul>
@@ -224,6 +235,7 @@
           </div>
           <div class="card-body">
             <p class="tags">Python · PostgreSQL · dbt · Airflow · Docker</p>
+            <p class="eyebrow">02 — Data pipeline</p>
             <h3>Bed Occupancy Forecasting Pipeline</h3>
             <p class="result">Each ward gets a daily occupancy figure, a 7-day forecast, and an alert above 90% capacity. The patient-stay records are synthetic.</p>
             <ul>
@@ -245,6 +257,7 @@
           </div>
           <div class="card-body">
             <p class="tags">Python · SQLite · pytest · OOP</p>
+            <p class="eyebrow">03 — Python · SQLite</p>
             <h3>Hotel Management System</h3>
             <p class="result">Guests, reception, housekeeping, and managers each get their own menu, with bookings saved and tested.</p>
             <ul>
@@ -266,6 +279,7 @@
           </div>
           <div class="card-body">
             <p class="tags">Python · REST · HTTP · CRUD</p>
+            <p class="eyebrow">04 — REST API</p>
             <h3>Code Clinics</h3>
             <p class="result">Students can book or cancel a session, and the API refuses a double booking.</p>
             <ul>

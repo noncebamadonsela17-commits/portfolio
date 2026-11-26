@@ -1,3 +1,14 @@
+const progress = document.querySelector("#progress");
+
+function updateProgress() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const percent = max > 0 ? Math.round((window.scrollY / max) * 100) : 0;
+  progress.textContent = `${String(percent).padStart(2, "0")}%`;
+}
+
+updateProgress();
+window.addEventListener("scroll", updateProgress, { passive: true });
+
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector("#menu");
 
